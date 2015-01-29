@@ -14,5 +14,9 @@ var swapCase = function(str) {
 };
 
 var letterCount = function(str) {
-
+  var cache = '';
+  str.split(' ').forEach(function (val) {
+    cache = (val.length > cache.length) ? val : cache;
+  });
+  return cache;
 };
