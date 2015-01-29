@@ -14,6 +14,8 @@ describe('problem set 2', function() {
   describe("letterCount", function () {
     it("should return the first word with the greatest number of repeated letters", function () {
       expect(letterCount('Today, is the greatest day ever!' )).toBe('greatest');
+      expect(letterCount('Today, is the greast day ever!' )).toBe('ever!');
+      expect(letterCount('Today, is the greast day ver!' )).toBe(-1);
     });
   });
 });
